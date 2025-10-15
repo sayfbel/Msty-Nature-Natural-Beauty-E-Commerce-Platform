@@ -1,0 +1,9 @@
+.site-header{background:#fff;box-shadow:0 1px 6px rgba(2,6,23,0.06);position:sticky;top:0;z-index:60}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-weight:700;letter-spacing:1px}
+.search input{padding:8px 12px;border-radius:10px;border:1px solid #e6e7eb;width:220px}
+.nav-right{display:flex;align-items:center;gap:16px}
+.nav-item{color:var(--muted);font-size:0.95rem;padding:6px 8px}
+@media(max-width:720px){.search input{display:none}}
+.Logoname{background-color: #f8f8f8;text-align: center; cursor: pointer; font-size: 0.7rem; padding: 0.5rem;}
+.brand{display: flex; justify-content: space-around;align-items: center; width: 40%;}

@@ -1,0 +1,79 @@
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.newPrice{
+  color: #ff4d4f;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.card-media img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-body h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background: #111;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.btn:hover {
+  background: #333;
+}
+
+.small {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 6px;
+}
+
+/* Offer Badge */
+.offer-name {
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: #ff4d4f;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 10;
+  transform: rotate(10deg);
+}

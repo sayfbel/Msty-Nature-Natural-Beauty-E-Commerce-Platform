@@ -1,0 +1,312 @@
+/* ==================== GENERAL ==================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.back {
+  background: transparent;
+  border: none;
+  color: #555;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+.back:hover {
+  color: #111;
+}
+
+/* ==================== PRODUCT GRID ==================== */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ==================== IMAGE SECTION ==================== */
+.images-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gallery {
+  position: relative;
+}
+
+.zoom-container {
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: zoom-in;
+}
+
+.zoom-container img {
+  width: 100%;
+  height: auto;
+  max-height: 55vh;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease-out, transform-origin 0.25s ease-out;
+}
+
+/* Thumbnails */
+.scroll-images {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.scroll-images img {
+  flex: 0 0 auto;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.scroll-images img:hover {
+  transform: scale(1.05);
+}
+.scroll-images img.active {
+  border-color: #111;
+}
+.scroll-images::-webkit-scrollbar {
+  height: 6px;
+}
+.scroll-images::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+/* ==================== PRODUCT DETAILS ==================== */
+.details {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.details h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111;
+}
+
+/* Quantity */
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.quantity button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.quantity button:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* Buttons */
+.btn {
+  background: #111;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background: #333;
+}
+
+/* Checkout form */
+.details form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.details form label {
+  font-weight: 500;
+  color: #444;
+}
+.details form input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+.details form input:focus {
+  border-color: #111;
+  box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.15);
+}
+.checkout-btn {
+  background: #111;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+.checkout-btn:hover {
+  background: #333;
+}
+.checkout-btn:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+/* ==================== DESCRIPTION ==================== */
+.container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 1rem;
+  word-break: break-word;
+}
+.container p:not(.show-full) {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.show-more {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: 5px;
+  transition: color 0.2s;
+}
+.show-more:hover {
+  color: #0056b3;
+}
+
+/* ==================== TAX LINE ==================== */
+.tax-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 8px;
+}
+.info-icon {
+  display: inline-block;
+  margin-left: 6px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.info-icon:hover {
+  background-color: #0056b3;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .details {
+    padding: 16px;
+  }
+  .price {
+    font-size: 1.3rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .product-page{
+    padding: 0;
+  }
+  .product-grid {
+    gap: 1.5rem;
+  }
+
+  .zoom-container img {
+    max-height: 40vh;
+  }
+
+  .scroll-images img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .details {
+    box-shadow: none;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  .details h1 {
+    font-size: 1.4rem;
+  }
+
+  .btn,
+  .checkout-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .quantity {
+    justify-content: center;
+  }
+
+  .definition,
+  .info-details {
+    font-size: 0.9rem;
+  }
+
+  .scroll-images {
+    justify-content: flex-start;
+    padding-left: 4px;
+  }
+}
